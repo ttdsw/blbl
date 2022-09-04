@@ -6,7 +6,7 @@ on:
 
   schedule: # 计划任务触发
 
-    - cron: '5 15 * * *'
+    - cron: '5 17 * * *'
 
   # cron表达式，时区是UTC时间，比我们晚8小时，要用我们的时间减去8小时后填上去，如上所表示的是每天23点5分
 
@@ -40,7 +40,6 @@ jobs:
 
       - name: Run APP
 
-        timeout-minutes: ${{secrets.TIMEOUT_MINUTES || 60}} # 超时时间(分钟)
 
         run: |
 
